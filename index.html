@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechVenture Games</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="player" id="player"></div>
+    
+    <section class="section" id="hero">
+      <h1>TechVenture</h1>
+      <p>Where Innovation Meets Play</p>
+      <div class="hero-description">
+        <p>Pioneering the future of technology through creative solutions and innovative thinking</p>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Why Choose Us?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Fast Development</h3>
+          <p>Lightning-fast development cycles with cutting-edge technologies</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Client-Focused</h3>
+          <p>Dedicated support and personalized solutions for every client</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💡</div>
+          <h3>Innovation First</h3>
+          <p>Always staying ahead with the latest tech trends and solutions</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>Global Reach</h3>
+          <p>Serving clients worldwide with scalable solutions</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <h2>Our Services</h2>
+      <div class="collectibles">
+        <div class="coin" data-info="AI Solutions: Advanced machine learning and neural networks to power your business intelligence">
+          <svg viewBox="0 0 100 100" class="coin-svg">
+            <circle cx="50" cy="50" r="40" class="coin-outer"/>
+            <text x="50" y="55" class="coin-text">AI</text>
+          </svg>
+        </div>
+        <div class="coin" data-info="Cloud Computing: Scalable infrastructure and cloud-native solutions for modern enterprises">
+          <svg viewBox="0 0 100 100" class="coin-svg">
+            <circle cx="50" cy="50" r="40" class="coin-outer"/>
+            <text x="50" y="55" class="coin-text">☁️</text>
+          </svg>
+        </div>
+        <div class="coin" data-info="Cybersecurity: Advanced threat protection and security solutions for your peace of mind">
+          <svg viewBox="0 0 100 100" class="coin-svg">
+            <circle cx="50" cy="50" r="40" class="coin-outer"/>
+            <text x="50" y="55" class="coin-text">🔒</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <p class="about-description">Founded in 2020, TechVenture has been at the forefront of technological innovation, delivering cutting-edge solutions to businesses worldwide. Our team of expert developers, designers, and strategists work together to create seamless digital experiences.</p>
+        <div class="platform">
+          <div class="block">
+            <h4>Innovative</h4>
+            <p>Pushing boundaries with creative solutions</p>
+          </div>
+          <div class="block">
+            <h4>Scalable</h4>
+            <p>Growing with your business needs</p>
+          </div>
+          <div class="block">
+            <h4>Secure</h4>
+            <p>Enterprise-grade security standards</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Clients Served</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Team Members</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact Us</h2>
+      <p class="contact-intro">Ready to start your tech journey? Get in touch with our team!</p>
+      <div class="contact-form">
+        <input type="text" placeholder="Name" class="powerup">
+        <input type="email" placeholder="Email" class="powerup">
+        <textarea placeholder="Message" class="powerup"></textarea>
+        <button class="btn-submit">Send Message</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="score">Score: <span id="score-value">0</span></div>
+  <div id="info-box"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>

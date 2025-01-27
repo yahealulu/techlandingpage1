@@ -1,0 +1,275 @@
+:root {
+  --primary: #00ff9d;
+  --secondary: #ff00f7;
+  --background: #0a0a2a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+.game-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.player {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 20px var(--primary);
+  z-index: 1000;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+h1, h2 {
+  font-size: 4rem;
+  margin: 0;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.collectibles {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.coin {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.coin:hover {
+  transform: scale(1.1);
+}
+
+.coin-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.coin-outer {
+  fill: var(--primary);
+  opacity: 0.8;
+}
+
+.coin-text {
+  fill: white;
+  text-anchor: middle;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.platform {
+  display: flex;
+  gap: 1rem;
+}
+
+.block {
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.powerup {
+  padding: 1rem;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.powerup:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 10px var(--secondary);
+}
+
+.btn-submit {
+  padding: 1rem;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  color: var(--background);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+#score {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  z-index: 1000;
+}
+
+#info-box {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 1rem;
+  background: rgba(0,0,0,0.8);
+  border-radius: 8px;
+  color: white;
+  display: none;
+  z-index: 1000;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.coin {
+  animation: float 2s ease-in-out infinite;
+}
+
+.hero-description {
+  max-width: 600px;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.about-content {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.about-description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.stat-label {
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.contact-intro {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.block {
+  text-align: center;
+  min-width: 200px;
+}
+
+.block h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.block p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats {
+    flex-direction: column;
+  }
+  
+  .platform {
+    flex-direction: column;
+  }
+}
