@@ -337,6 +337,10 @@ p {
     font-size: 0.9rem;
     text-align: center;
   }
+
+  .player {
+    transition: opacity 0.3s ease;
+  }
 }
 
 @media (max-width: 480px) {
